@@ -1,0 +1,47 @@
+# 开发环境配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/exam_platform?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      connection-timeout: 20000
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 16
+          max-idle: 8
+          min-idle: 4
+
+# MinIO 配置（本地开发使用）
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin123
+  bucket-name: exam-platform
+  video-bucket: exam-videos
+
+# 短信验证码（开发环境使用控制台输出）
+sms:
+  provider: console
+  aliyun:
+    access-key-id: your-key
+    access-key-secret: your-secret
+    sign-name: 考试平台
+    template-code: SMS_123456789
+
+# 调试配置
+logging:
+  level:
+    com.exam.module: debug
+    com.exam.module.*.mapper: trace

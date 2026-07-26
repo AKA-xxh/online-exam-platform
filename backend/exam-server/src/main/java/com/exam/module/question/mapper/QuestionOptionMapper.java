@@ -1,0 +1,8 @@
+package com.exam.module.question.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.exam.module.question.entity.QuestionOption;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface QuestionOptionMapper extends BaseMapper<QuestionOption> {}
