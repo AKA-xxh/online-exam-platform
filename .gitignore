@@ -10,6 +10,7 @@ target/
 *.class
 *.jar
 *.war
+*.tsbuildinfo
 
 # IDE
 .idea/
