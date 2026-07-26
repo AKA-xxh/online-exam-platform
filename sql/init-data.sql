@@ -87,7 +87,7 @@ ON DUPLICATE KEY UPDATE role_id = VALUES(role_id);
 -- ==================== 默认管理员账号 ====================
 -- 密码: admin123 (BCrypt 加密结果)
 INSERT INTO sys_user (id, username, password, real_name, nickname, user_type, status) VALUES
-(1, 'admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5Eh', '系统管理员', 'Admin', 3, 1)
+(1, 'admin', '$10$zAjGxu5Eji.4HS0gAaN3s.5y1prLdF63wuDjLGExYYkoBNiQcr39a', '系统管理员', 'Admin', 3, 1)
 ON DUPLICATE KEY UPDATE username = VALUES(username);
 
 -- 管理员-角色关联
@@ -96,7 +96,7 @@ ON DUPLICATE KEY UPDATE user_id = VALUES(user_id);
 
 -- ==================== 默认教师账号 ====================
 INSERT INTO sys_user (id, username, password, real_name, nickname, user_type, status) VALUES
-(2, 'teacher', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5Eh', '张老师', 'Teacher Zhang', 2, 1)
+(2, 'teacher', '$10$VAghariqsxzux2ss.Vmnl.2RFBD3MYziYDZYYNLp56hxkMxYY6.ne', '张老师', 'Teacher Zhang', 2, 1)
 ON DUPLICATE KEY UPDATE username = VALUES(username);
 
 INSERT INTO sys_user_role (user_id, role_id) VALUES (2, 2)
@@ -104,7 +104,7 @@ ON DUPLICATE KEY UPDATE user_id = VALUES(user_id);
 
 -- ==================== 默认学员账号 ====================
 INSERT INTO sys_user (id, username, password, real_name, nickname, user_type, status) VALUES
-(3, 'student', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5Eh', '李同学', 'Student Li', 1, 1)
+(3, 'student', '$10$XSk1x9ifihqXF.wmF7dXHemkFZcWfbYeCNosTgTbF3OCVwAZogq5W', '李同学', 'Student Li', 1, 1)
 ON DUPLICATE KEY UPDATE username = VALUES(username);
 
 INSERT INTO sys_user_role (user_id, role_id) VALUES (3, 3)

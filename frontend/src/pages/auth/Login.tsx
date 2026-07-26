@@ -105,11 +105,11 @@ export default function Login() {
           </Form.Item>
         </Form>
 
-        <div style={{ textAlign: 'center' }}>
-          <Text type="secondary" style={{ fontSize: 12 }}>
-            演示账号：admin / admin123（管理员）| student / admin123（学员）
-          </Text>
-        </div>
+        {/*<div style={{ textAlign: 'center' }}>*/}
+        {/*  <Text type="secondary" style={{ fontSize: 12 }}>*/}
+        {/*    演示账号：admin / admin123（管理员）| student / student123（学员）*/}
+        {/*  </Text>*/}
+        {/*</div>*/}
       </Card>
     </div>
   );
